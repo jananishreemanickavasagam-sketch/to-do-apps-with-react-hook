@@ -1,0 +1,153 @@
+/* ===== Global ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ===== App Container ===== */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== Header ===== */
+.header h1 {
+  margin: 0;
+  color: #2d3436;
+  font-size: 2rem;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #636e72;
+  margin-top: 5px;
+}
+
+/* ===== Task Form ===== */
+.task-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+
+.task-form input {
+  width: 70%;
+  padding: 12px;
+  border: 2px solid #dfe6e9;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.task-form input:focus {
+  border-color: #0984e3;
+}
+
+.task-form button {
+  padding: 12px 20px;
+  background: #0984e3;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task-form button:hover {
+  background: #74b9ff;
+}
+
+/* ===== Task List ===== */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  background: #f5f6fa;
+  margin: 10px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.task-item:hover {
+  background: #dfe6e9;
+  transform: scale(1.02);
+}
+
+.task-item span {
+  flex: 1;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: #636e72;
+}
+
+.task-item button {
+  border: none;
+  background: transparent;
+  color: #d63031;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.task-item button:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  color: #636e72;
+}
+
+/* ===== States ===== */
+.loading,
+.empty {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #636e72;
+  animation: fadeIn 0.6s ease-in;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
